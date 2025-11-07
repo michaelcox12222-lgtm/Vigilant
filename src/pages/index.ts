@@ -1,0 +1,9 @@
+export { Home } from "./Company/Home";
+export { About } from "./Company/About";
+export { Features } from "./Company/Features";
+export { Pricing } from "./Company/Pricing";
+export { Contact } from "./Company/Contact";
+export { Beta } from "./Legal/Beta";
+export { Terms } from "./Legal/Terms";
+export { Privacy } from "./Legal/Privacy";
+export { LawEnforcement } from "./Legal/LawEnforcement";
