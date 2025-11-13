@@ -246,11 +246,11 @@ export function Hero({ onNavigate }: { onNavigate?: (page: string) => void }) {
             return (
               <div
                 key={index}
-                className="px-6 py-4 rounded-2xl backdrop-blur-[60px] border w-[200px] shadow-[0_20px_60px_0_rgba(0,0,0,0.5)] hover:border-brand-primary/40 transition-all"
+                className="px-6 py-4 rounded-2xl border w-[200px] shadow-[0_20px_60px_0_rgba(0,0,0,0.5)] hover:border-brand-primary/40 transition-all"
                 style={{
                   background:
-                    "linear-gradient(135deg, rgba(30, 58, 95, 0.2) 0%, rgba(255, 255, 255, 0.05) 100%)",
-                  borderColor: "rgba(30, 58, 95, 0.3)",
+                    "linear-gradient(135deg, rgba(30, 58, 95, 1) 0%, rgba(20, 40, 70, 1) 100%)",
+                  borderColor: "rgba(30, 58, 95, 0.5)",
                 }}
               >
                 <div className="flex flex-col items-center gap-2">
