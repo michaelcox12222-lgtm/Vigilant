@@ -11,8 +11,8 @@ export function Home({ onNavigate }: { onNavigate?: (page: string) => void }) {
     <>
       <Hero onNavigate={onNavigate} />
       <ProblemsSection />
-      <BenefitsSection />
       <HowItWorksSection />
+      <BenefitsSection />
       <ProofSection />
       <CTABand onNavigate={onNavigate} />
       <FAQSection />

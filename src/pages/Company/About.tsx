@@ -60,7 +60,7 @@ export function About() {
               )
             }
           >
-            Book a Demo
+            Watch a Demo
           </Button>
         </div>
       </section>

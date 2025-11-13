@@ -17,13 +17,7 @@ export default defineConfig({
   server: {
     port: 3000,
     open: true,
-    host: "localhost",
-    hmr: {
-      clientPort: 3000,
-    },
-    watch: {
-      usePolling: false,
-    },
+    host: true,
   },
   optimizeDeps: {
     include: [

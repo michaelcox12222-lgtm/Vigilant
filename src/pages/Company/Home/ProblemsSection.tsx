@@ -1,42 +1,42 @@
 import { Card, CardContent } from "../../../components/ui/card";
-import { MapPin, Building2, Users, Globe, Shield, Radio } from "lucide-react";
+import { MapPin, Building2, Users, Shield, Radio, Brain } from "lucide-react";
 
 const problems = [
   {
-    icon: MapPin,
-    title: "Field Staff & Traveling Employees",
+    icon: Radio,
+    title: "Live Safety Alerts",
     description:
-      "Real-time, location-aware alerts reach your team instantly—no command center required.",
+      "Know what's happening nearby in real time, from local incidents to major news.",
+  },
+  {
+    icon: MapPin,
+    title: "Location Sharing",
+    description:
+      "Share your live location with friends and family you trust.",
   },
   {
     icon: Shield,
-    title: "Security & Response Teams",
+    title: "Private Chat",
     description:
-      "Coordinate with end-to-end encrypted comms, SOS, and rally points during critical incidents.",
-  },
-  {
-    icon: Building2,
-    title: "Corporate & Campus Safety",
-    description:
-      "Monitor live locations, track threat proximity, and maintain duty-of-care for distributed teams.",
+      "Send secure messages or trigger an SOS when you need help fast.",
   },
   {
     icon: Users,
-    title: "Organizations & Enterprises",
+    title: "AI Safety Chat",
     description:
-      "Deploy role-based training, admin dashboards, and secure infrastructure at scale.",
+      "Ask questions and get quick, practical tips, what to do, who to call, how to stay calm.",
   },
   {
-    icon: Globe,
-    title: "Distributed Workforces",
+    icon: Building2,
+    title: "Smart Guidance",
     description:
-      "Close the awareness gap with behavior-aware guidance delivered to thousands on one platform.",
+      "Follow clear, step-by-step instructions right on your screen when it matters most.",
   },
   {
-    icon: Radio,
-    title: "Emergency Response",
+    icon: Brain,
+    title: "Predictive AI",
     description:
-      "Access threat intelligence from 10,000+ sources to act in the critical first minutes.",
+      "Stay one step ahead with our smart technology, helping you avoid risks before they happen.",
   },
 ];
 
@@ -46,10 +46,11 @@ export function ProblemsSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl tracking-tight text-white mb-4">
-            Enterprise-grade safety. Built for small & mid-sized teams.
+            Stay safe wherever you go
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Developed by former FBI, military, and intelligence professionals to bring government-grade safety directly to your organization.
+            Get real-time safety alerts, share your location with people you
+            trust, and chat securely, everything in one simple app.
           </p>
         </div>
 

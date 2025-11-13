@@ -37,8 +37,8 @@ export function Footer({
           <div className="col-span-1 md:col-span-2">
             <img src={vigilantLogo} alt="Vigilant Logo" className="h-16 mb-4" />
             <p className="text-gray-400 max-w-md">
-              Command center intelligence, now in every employee's pocket.
-              Real-time safety intelligence for your entire workforce.
+              AI-powered safety, made simple. Real-time alerts and peace of mind
+              wherever you go.
             </p>
           </div>
 

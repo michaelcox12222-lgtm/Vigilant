@@ -36,10 +36,11 @@ export function ProofSection() {
         {/* Testimonials */}
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl tracking-tight text-white mb-4">
-            Trusted by thousands worldwide
+            Used by safety professionals. Loved by everyone
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Real stories from real people who prioritize their safety.
+            From first responders to families, see how Vigilant helps people
+            stay prepared and protected.
           </p>
         </div>
 

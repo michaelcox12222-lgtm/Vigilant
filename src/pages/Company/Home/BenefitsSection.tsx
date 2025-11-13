@@ -3,27 +3,24 @@ import { Radio, Shield, GraduationCap, LayoutDashboard } from "lucide-react";
 const benefits = [
   {
     icon: Radio,
-    title: "Real-Time, Location-Aware Alerts",
-    description:
-      "Deliver immediate, location-relevant threat intel from 10,000+ global sources to the right teams and individuals.",
+    title: "Easy to use",
+    description: "No setup headaches.",
   },
   {
     icon: Shield,
-    title: "End-to-End Encrypted Comms",
-    description:
-      "Coordinate with encrypted messaging, SOS, and rally points—even when conditions are chaotic.",
+    title: "Faster alerts",
+    description: "See potential danger sooner.",
   },
   {
     icon: GraduationCap,
-    title: "Behavior-Aware Guidance & Training",
+    title: "Truly private",
     description:
-      "Role-based training and in-app guidance tailored to each situation—reinforcing readiness when it matters.",
+      "Your data stays secure and is only shared with people you choose.",
   },
   {
     icon: LayoutDashboard,
-    title: "Admin Dashboards for Oversight",
-    description:
-      "Track deployment, monitor team locations, assign courses, and maintain accountability across your organization.",
+    title: "Built by experts",
+    description: "Created by professionals who keep safety simple.",
   },
 ];
 
@@ -33,11 +30,8 @@ export function BenefitsSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl tracking-tight text-white mb-4">
-            Always Connected, Always Secure, Always In Reach
+            Why people love Vigilant
           </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Vigilant scales like a communications platform: one deployment connects thousands on a single secure infrastructure all on an easy to use mobile app.
-          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

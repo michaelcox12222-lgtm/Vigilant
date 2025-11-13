@@ -1,11 +1,9 @@
-import { useMemo } from "react";
 import { Button } from "../../../components/ui/button";
 import {
   Radio,
   Globe,
   MessageSquare,
   Bot,
-  GraduationCap,
 } from "lucide-react";
 import { AnimatedChip } from "../../../components/animations/AnimatedChip";
 import heroBackground from "../../../assets/background.png";
@@ -16,24 +14,20 @@ import googlePlayImage from "../../../assets/google-play.png";
 const infoCards = [
   {
     icon: Radio,
-    label: "Global Threat Alerts",
+    label: "Live Safety Alerts",
   },
   {
     icon: Globe,
-    label: "Safety Tracking",
+    label: "Location Sharing",
   },
   {
     icon: MessageSquare,
-    label: "Encrypted Messaging",
+    label: "Private Chat",
   },
   {
     icon: Bot,
-    label: "AI Assisted Chatbots",
-  },
-  {
-    icon: GraduationCap,
-    label: "Training Academy",
-  },
+    label: "AI Safety Chat",
+  }
 ];
 
 export function Hero({ onNavigate }: { onNavigate?: (page: string) => void }) {
@@ -207,7 +201,7 @@ export function Hero({ onNavigate }: { onNavigate?: (page: string) => void }) {
 
         {/* Main Headline with gradient animation and green highlight */}
         <h1
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-5 leading-[1.15]"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-9xl mb-5 leading-[1.15]"
           style={{
             fontFamily: "'Work Sans', sans-serif",
             fontWeight: 400,
@@ -225,13 +219,13 @@ export function Hero({ onNavigate }: { onNavigate?: (page: string) => void }) {
               animation: "gradient-sweep 10s ease-in-out forwards",
             }}
           >
-            Simplified Safety for Everyone
+            Simplified Safety<br /> for Everyone
           </span>
         </h1>
 
         {/* Subheadline */}
         <p
-          className="text-lg sm:text-xl text-gray-200 max-w-3xl mx-auto mb-12 leading-relaxed"
+          className="text-lg sm:text-xl text-gray-200 max-w-3xl mx-auto mb-6 leading-relaxed"
           style={{
             fontWeight: 400,
             letterSpacing: "-0.01em",
@@ -240,34 +234,11 @@ export function Hero({ onNavigate }: { onNavigate?: (page: string) => void }) {
           Built by former FBI, military, and intelligence experts, Vigilant helps you and your loved ones stay aware, connected, and safe, anytime, anywhere.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-          <div className="relative">
-            <Button
-              size="lg"
-              onClick={() =>
-                window.open(
-                  "https://www.loom.com/share/b897560895234780b53e1319c053104e?sid=9be90857-f317-4511-8826-4925791d3064",
-                  "_blank"
-                )
-              }
-              className="relative text-base px-8 py-6 w-full sm:w-auto bg-brand-primary hover:bg-brand-primary-hover text-white border-0 shadow-[0_8px_32px_0_rgba(26,157,143,0.4)] backdrop-blur-xl"
-              style={{ fontWeight: 500 }}
-            >
-              Book a Demo
-            </Button>
-          </div>
-          <div className="relative">
-            <Button
-              size="lg"
-              variant="outline"
-              onClick={() => onNavigate?.("beta")}
-              className="relative text-base px-8 py-6 w-full sm:w-auto border-white/20 bg-white/[0.03] text-white hover:bg-white/10 hover:text-brand-primary backdrop-blur-3xl shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]"
-              style={{ fontWeight: 500 }}
-            >
-              Get Started Now
-            </Button>
-          </div>
-        </div>
+        <p
+          className="text-sm sm:text-md text-gray-400 mx-auto mb-12 leading-relaxed"
+        >
+          Private. Secure. Built by safety professionals.
+        </p>
 
         <div className="flex items-stretch justify-center gap-4 mt-12 mb-10">
           {infoCards.map((card, index) => {

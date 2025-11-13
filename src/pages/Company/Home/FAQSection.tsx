@@ -21,16 +21,6 @@ const faqs = [
     answer:
       "Vigilant provides global coverage across 195+ countries. Alert density is highest in major cities and tourist destinations, but our AI Travel Companion can brief you on any location worldwide.",
   },
-  {
-    question: "What's included in the free trial?",
-    answer:
-      "Your 14-day trial includes unlimited alerts, full access to the Academy training modules, AI Travel Companion, secure messaging, and live tracking for up to 5 connections. No credit card required to start.",
-  },
-  {
-    question: "Do you offer features for teams and organizations?",
-    answer:
-      "Yes! Our Enterprise plan includes centralized dashboards, duty-of-care tracking for global teams, custom geofencing, bulk training deployment, and dedicated support. Contact us for a demo.",
-  },
 ];
 
 export function FAQSection() {

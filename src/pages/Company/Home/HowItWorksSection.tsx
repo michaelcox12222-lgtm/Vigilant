@@ -4,30 +4,30 @@ const steps = [
   {
     number: "01",
     icon: Radio,
-    title: "Intel",
+    title: "Know",
     description:
-      "Close the awareness gap with immediate, location-relevant threat intel from 10,000+ sources.",
+      "Get instant alerts about what's nearby.",
   },
   {
     number: "02",
     icon: Bell,
-    title: "Alert",
+    title: "Share",
     description:
-      "Reach the right teams and individuals in the critical first minutes of an incident.",
+      "Let trusted contacts see where you are.",
   },
   {
     number: "03",
     icon: GraduationCap,
-    title: "Guide",
+    title: "Chat",
     description:
-      "Deliver behavior-aware training and clear next steps when response matters most.",
+      "Ask the AI for advice or message people you trust.",
   },
   {
     number: "04",
     icon: Users,
-    title: "Connect",
+    title: "Stay safe",
     description:
-      "Coordinate teams with encrypted communications, SOS, rally points, and live tracking.",
+      "Follow simple steps for any situation.",
   },
 ];
 
@@ -37,11 +37,8 @@ export function HowItWorksSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl tracking-tight text-white mb-4">
-            Know Sooner, Act Faster
+            How it works
           </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Replace slow, command-center-dependent models with instant, behavior-aware intelligence.
-          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -64,7 +61,9 @@ export function HowItWorksSection() {
                 <step.icon className="h-10 w-10 text-brand-primary" />
               </div>
 
-              <div className="text-sm text-brand-primary mb-2">{step.number}</div>
+              <div className="text-sm text-brand-primary mb-2">
+                {step.number}
+              </div>
               <h3 className="text-2xl text-white mb-2">{step.title}</h3>
               <p className="text-gray-300">{step.description}</p>
             </div>
