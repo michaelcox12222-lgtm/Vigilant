@@ -7,6 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../../components/ui/accordion";
+import { motion } from "framer-motion";
 
 const plans = [
   {
@@ -140,8 +141,18 @@ export function Pricing({
     <div className="min-h-screen text-white">
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto text-center">
-          <div className="flex items-center justify-center gap-2 mb-6">
+        <motion.div 
+          className="max-w-5xl mx-auto text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <motion.div 
+            className="flex items-center justify-center gap-2 mb-6"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+          >
             <Sparkles className="w-8 h-8 text-brand-primary" />
             <h1
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.15]"
@@ -154,19 +165,27 @@ export function Pricing({
               Pricing
             </h1>
             <Sparkles className="w-8 h-8 text-brand-primary" />
-          </div>
-          <p
+          </motion.div>
+          <motion.p
             className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto mb-8 leading-relaxed"
             style={{
               fontWeight: 400,
               letterSpacing: "-0.01em",
             }}
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
           >
             Simple, scalable plans for businesses of any size.
-          </p>
+          </motion.p>
 
           {/* Billing Toggle */}
-          <div className="flex items-center justify-center gap-4 mb-12">
+          <motion.div 
+            className="flex items-center justify-center gap-4 mb-12"
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.5, ease: "easeOut" }}
+          >
             <span
               className={`text-sm ${
                 !isAnnual ? "text-white" : "text-gray-400"
@@ -189,8 +208,8 @@ export function Pricing({
             >
               Annual <span className="text-brand-primary">(Save 20%)</span>
             </span>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
 
       {/* Pricing Cards */}
@@ -198,7 +217,7 @@ export function Pricing({
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {plans.map((plan, index) => (
-              <div
+              <motion.div
                 key={index}
                 className={`relative backdrop-blur-[60px] border rounded-2xl p-8 shadow-[0_20px_60px_0_rgba(0,0,0,0.5)] transition-all ${
                   plan.popular
@@ -213,6 +232,10 @@ export function Pricing({
                     ? undefined
                     : "rgba(30, 58, 95, 0.3)",
                 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.7, delay: index * 0.15, ease: "easeOut" }}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-primary text-white text-xs px-4 py-1 rounded-full">
@@ -267,7 +290,7 @@ export function Pricing({
                     </li>
                   ))}
                 </ul>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -276,14 +299,24 @@ export function Pricing({
       {/* Comparison Table */}
       <section className="pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
-          <h2
+          <motion.h2
             className="text-3xl sm:text-4xl text-center mb-12"
             style={{ fontWeight: 500 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
           >
             Compare Plans
-          </h2>
+          </motion.h2>
 
-          <div className="bg-white/[0.05] backdrop-blur-[60px] border border-white/20 rounded-2xl overflow-hidden shadow-[0_20px_60px_0_rgba(0,0,0,0.5)]">
+          <motion.div 
+            className="bg-white/[0.05] backdrop-blur-[60px] border border-white/20 rounded-2xl overflow-hidden shadow-[0_20px_60px_0_rgba(0,0,0,0.5)]"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+          >
             <table className="w-full">
               <thead>
                 <tr className="border-b border-white/20">
@@ -339,27 +372,37 @@ export function Pricing({
                 ))}
               </tbody>
             </table>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* FAQ */}
       <section className="pb-32 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
-          <h2
+          <motion.h2
             className="text-3xl sm:text-4xl text-center mb-12"
             style={{ fontWeight: 500 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
           >
             Frequently Asked Questions
-          </h2>
+          </motion.h2>
 
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
-              <AccordionItem
+              <motion.div
                 key={index}
-                value={`item-${index}`}
-                className="bg-white/[0.05] backdrop-blur-[60px] border border-white/20 rounded-xl px-6 hover:border-brand-primary/40 transition-all"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.5, delay: 0.2 + index * 0.1, ease: "easeOut" }}
               >
+                <AccordionItem
+                  value={`item-${index}`}
+                  className="bg-white/[0.05] backdrop-blur-[60px] border border-white/20 rounded-xl px-6 hover:border-brand-primary/40 transition-all"
+                >
                 <AccordionTrigger className="text-left text-white hover:text-brand-primary">
                   {faq.question}
                 </AccordionTrigger>
@@ -367,6 +410,7 @@ export function Pricing({
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
+              </motion.div>
             ))}
           </Accordion>
         </div>

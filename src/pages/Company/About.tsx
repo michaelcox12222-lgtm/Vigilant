@@ -1,5 +1,6 @@
 import { Button } from "../../components/ui/button";
 import { Shield, AlertTriangle, User } from "lucide-react";
+import { motion } from "framer-motion";
 
 const founders = [
   {
@@ -25,58 +26,85 @@ export function About() {
     <div className="min-h-screen text-white">
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto text-center">
-          <h1
+        <motion.div 
+          className="max-w-5xl mx-auto text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <motion.h1
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-8 leading-[1.15]"
             style={{
               fontFamily: "'Work Sans', sans-serif",
               fontWeight: 400,
               letterSpacing: "-0.02em",
             }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           >
             If awareness is safety,{" "}
             <span className="text-brand-primary">Vigilant</span> is your most
             trusted line of defense.
-          </h1>
-          <p
+          </motion.h1>
+          <motion.p
             className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed"
             style={{
               fontWeight: 400,
               letterSpacing: "-0.01em",
             }}
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
           >
             We close the gap between risk and response by pairing real-time
             alerts with field-tested training so people act in the critical
             first minutes.
-          </p>
-          <Button
-            size="lg"
-            className="bg-brand-primary hover:bg-brand-primary-hover text-white px-8 py-6 border-0 shadow-[0_8px_32px_0_rgba(26,157,143,0.4)]"
-            style={{ fontWeight: 500 }}
-            onClick={() =>
-              window.open(
-                "https://www.loom.com/share/b897560895234780b53e1319c053104e?sid=9be90857-f317-4511-8826-4925791d3064",
-                "_blank"
-              )
-            }
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.6, ease: "easeOut" }}
           >
-            Watch Demo
-          </Button>
-        </div>
+            <Button
+              size="lg"
+              className="bg-brand-primary hover:bg-brand-primary-hover text-white px-8 py-6 border-0 shadow-[0_8px_32px_0_rgba(26,157,143,0.4)]"
+              style={{ fontWeight: 500 }}
+              onClick={() =>
+                window.open(
+                  "https://www.loom.com/share/b897560895234780b53e1319c053104e?sid=9be90857-f317-4511-8826-4925791d3064",
+                  "_blank"
+                )
+              }
+            >
+              Watch Demo
+            </Button>
+          </motion.div>
+        </motion.div>
       </section>
 
       {/* Why Vigilant Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <h2
+          <motion.h2
             className="text-3xl sm:text-4xl md:text-5xl text-center mb-16"
             style={{ fontWeight: 500, letterSpacing: "-0.01em" }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
           >
             Why Vigilant
-          </h2>
+          </motion.h2>
 
           {/* Our Background */}
-          <div className="bg-white/[0.03] backdrop-blur-3xl border border-white/10 rounded-2xl p-8 md:p-12 mb-8 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]">
+          <motion.div 
+            className="bg-white/[0.03] backdrop-blur-3xl border border-white/10 rounded-2xl p-8 md:p-12 mb-8 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+          >
             <div className="flex items-start gap-4 mb-6">
               <div className="w-12 h-12 rounded-lg bg-brand-primary/10 backdrop-blur-xl border border-brand-primary/20 flex items-center justify-center flex-shrink-0">
                 <Shield className="w-6 h-6 text-brand-primary" />
@@ -108,10 +136,16 @@ export function About() {
                 critical data from point A to point B.
               </p>
             </div>
-          </div>
+          </motion.div>
 
           {/* Closing the Gap */}
-          <div className="bg-white/[0.03] backdrop-blur-3xl border border-white/10 rounded-2xl p-8 md:p-12 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]">
+          <motion.div 
+            className="bg-white/[0.03] backdrop-blur-3xl border border-white/10 rounded-2xl p-8 md:p-12 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
+          >
             <div className="flex items-start gap-4 mb-6">
               <div className="w-12 h-12 rounded-lg bg-brand-primary/10 backdrop-blur-xl border border-brand-primary/20 flex items-center justify-center flex-shrink-0">
                 <AlertTriangle className="w-6 h-6 text-brand-primary" />
@@ -139,33 +173,47 @@ export function About() {
                 deployment, compliance, and integrations.
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Founders Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <h2
+          <motion.h2
             className="text-3xl sm:text-4xl md:text-5xl text-center mb-6"
             style={{ fontWeight: 500, letterSpacing: "-0.01em" }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
           >
             Leadership
-          </h2>
-          <p className="text-lg text-gray-400 text-center max-w-4xl mx-auto mb-16 leading-relaxed">
+          </motion.h2>
+          <motion.p 
+            className="text-lg text-gray-400 text-center max-w-4xl mx-auto mb-16 leading-relaxed"
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+          >
             Led by former intelligence officers, federal agents, and special
             operations veterans with deep experience in crisis response,
             national security, and executive protection. Our leadership team
             brings the expertise to deliver enterprise-grade safety tools at
             scale.
-          </p>
+          </motion.p>
 
           {/* Founders Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {founders.map((founder, index) => (
-              <div
+              <motion.div
                 key={index}
                 className="bg-white/[0.03] backdrop-blur-3xl border border-white/10 rounded-2xl p-6 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] hover:border-brand-primary/30 transition-all"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.6, delay: 0.2 + index * 0.1, ease: "easeOut" }}
               >
                 <div className="aspect-square rounded-xl overflow-hidden mb-6 bg-gradient-to-br from-brand-primary/10 to-black/50 border border-white/10">
                   <User className="w-24 h-24 text-brand-primary/40" />
@@ -174,12 +222,18 @@ export function About() {
                   {founder.name}
                 </h3>
                 <p className="text-brand-primary mb-3">{founder.role}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
 
           {/* Founder Emeritus */}
-          <div className="bg-white/[0.03] backdrop-blur-3xl border border-brand-primary/20 rounded-2xl p-8 md:p-12 shadow-[0_8px_32px_0_rgba(26,157,143,0.2)]">
+          <motion.div 
+            className="bg-white/[0.03] backdrop-blur-3xl border border-brand-primary/20 rounded-2xl p-8 md:p-12 shadow-[0_8px_32px_0_rgba(26,157,143,0.2)]"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7, delay: 0.5, ease: "easeOut" }}
+          >
             <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
               {/* Chris Fox Image */}
               <div className="w-48 h-48 flex-shrink-0">
@@ -238,7 +292,7 @@ export function About() {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>
