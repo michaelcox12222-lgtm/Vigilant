@@ -1,4 +1,3 @@
-import { Button } from "../../../components/ui/button";
 import {
   Radio,
   Globe,
@@ -10,6 +9,7 @@ import heroBackground from "../../../assets/background.png";
 import cityscapeImage from "../../../assets/city.png";
 import appStoreImage from "../../../assets/app-store.png";
 import googlePlayImage from "../../../assets/google-play.png";
+import { motion } from "framer-motion";
 
 const infoCards = [
   {
@@ -30,7 +30,7 @@ const infoCards = [
   }
 ];
 
-export function Hero({ onNavigate }: { onNavigate?: (page: string) => void }) {
+export function Hero() {
   return (
     <section
       id="home"
@@ -193,20 +193,33 @@ export function Hero({ onNavigate }: { onNavigate?: (page: string) => void }) {
         }}
       />
 
-      <div className="max-w-5xl mx-auto text-center relative z-[2]">
+      <motion.div 
+        className="max-w-5xl mx-auto text-center relative z-[2]"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
         {/* Animated Chip with Vigilant Logo */}
-        <div className="inline-flex items-center justify-center mb-8">
+        <motion.div 
+          className="inline-flex items-center justify-center mb-8"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+        >
           <AnimatedChip />
-        </div>
+        </motion.div>
 
         {/* Main Headline with gradient animation and green highlight */}
-        <h1
+        <motion.h1
           className="text-4xl sm:text-5xl md:text-6xl lg:text-9xl mb-5 leading-[1.15]"
           style={{
             fontFamily: "'Work Sans', sans-serif",
             fontWeight: 400,
             letterSpacing: "-0.02em",
           }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
         >
           <span
             style={{
@@ -221,30 +234,41 @@ export function Hero({ onNavigate }: { onNavigate?: (page: string) => void }) {
           >
             Simplified Safety<br /> for Everyone
           </span>
-        </h1>
+        </motion.h1>
 
         {/* Subheadline */}
-        <p
+        <motion.p
           className="text-lg sm:text-xl text-gray-200 max-w-3xl mx-auto mb-6 leading-relaxed"
           style={{
             fontWeight: 400,
             letterSpacing: "-0.01em",
           }}
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.5, ease: "easeOut" }}
         >
           Built by former FBI, military, and intelligence experts, Vigilant helps you and your loved ones stay aware, connected, and safe, anytime, anywhere.
-        </p>
+        </motion.p>
 
-        <p
+        <motion.p
           className="text-sm sm:text-md text-gray-400 mx-auto mb-12 leading-relaxed"
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.6, ease: "easeOut" }}
         >
           Private. Secure. Built by safety professionals.
-        </p>
+        </motion.p>
 
-        <div className="flex items-stretch justify-center gap-4 mt-12 mb-10">
+        <motion.div 
+          className="flex items-stretch justify-center gap-4 mt-12 mb-10"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.7, ease: "easeOut" }}
+        >
           {infoCards.map((card, index) => {
             const Icon = card.icon;
             return (
-              <div
+              <motion.div
                 key={index}
                 className="px-6 py-4 rounded-2xl border w-[200px] shadow-[0_20px_60px_0_rgba(0,0,0,0.5)] hover:border-brand-primary/40 transition-all"
                 style={{
@@ -252,6 +276,9 @@ export function Hero({ onNavigate }: { onNavigate?: (page: string) => void }) {
                     "linear-gradient(135deg, rgba(30, 58, 95, 1) 0%, rgba(20, 40, 70, 1) 100%)",
                   borderColor: "rgba(30, 58, 95, 0.5)",
                 }}
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 + index * 0.1, ease: "easeOut" }}
               >
                 <div className="flex flex-col items-center gap-2">
                   <div className="w-10 h-10 rounded-lg bg-brand-primary/20 backdrop-blur-xl border border-brand-primary/30 flex items-center justify-center shadow-lg shadow-brand-primary/30">
@@ -264,13 +291,18 @@ export function Hero({ onNavigate }: { onNavigate?: (page: string) => void }) {
                     {card.label}
                   </span>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
 
         {/* App Store Badges */}
-        <div className="flex flex-wrap items-center justify-center gap-4 mb-12 relative z-[2]">
+        <motion.div 
+          className="flex flex-wrap items-center justify-center gap-4 mb-12 relative z-[2]"
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 1.2, ease: "easeOut" }}
+        >
           <img
             src={appStoreImage}
             alt="Download on App Store"
@@ -283,9 +315,9 @@ export function Hero({ onNavigate }: { onNavigate?: (page: string) => void }) {
             className="h-14 sm:h-16 md:h-18 w-auto cursor-pointer hover:scale-105 transition-transform brightness-100 opacity-100"
             style={{ filter: "brightness(1) contrast(1)" }}
           />
-        </div>
+        </motion.div>
         
-      </div>
+      </motion.div>
     </section>
   );
 }

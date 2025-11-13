@@ -4,6 +4,7 @@ import { Input } from "../../components/ui/input";
 import { Textarea } from "../../components/ui/textarea";
 import { Label } from "../../components/ui/label";
 import { toast } from "sonner";
+import { motion } from "framer-motion";
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -48,41 +49,62 @@ export function Contact() {
     <div className="min-h-screen text-white">
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1
+        <motion.div 
+          className="max-w-4xl mx-auto text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <motion.h1
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 leading-[1.15]"
             style={{
               fontFamily: "'Work Sans', sans-serif",
               fontWeight: 400,
               letterSpacing: "-0.02em",
             }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           >
             Talk to <span className="text-brand-primary">Vigilant</span>
-          </h1>
-          <p
+          </motion.h1>
+          <motion.p
             className="text-base sm:text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed"
             style={{
               fontWeight: 400,
               letterSpacing: "-0.01em",
             }}
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
           >
             Evaluating enterprise licensing, custom training, or API/white-label
             options? Send us a note and we'll match you with a specialist. For
             support and security inquiries, we respond with priority.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
       </section>
 
       {/* Contact Form */}
       <section className="pb-32 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
-          <div className="bg-[#2a3441]/80 backdrop-blur-[60px] rounded-3xl p-8 sm:p-12 shadow-[0_20px_60px_0_rgba(0,0,0,0.6)] border border-white/20">
-            <h2
+          <motion.div 
+            className="bg-[#2a3441]/80 backdrop-blur-[60px] rounded-3xl p-8 sm:p-12 shadow-[0_20px_60px_0_rgba(0,0,0,0.6)] border border-white/20"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+          >
+            <motion.h2
               className="text-2xl sm:text-3xl mb-8"
               style={{ fontWeight: 500, letterSpacing: "-0.01em" }}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
             >
               Contact us
-            </h2>
+            </motion.h2>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* First Name */}
@@ -193,7 +215,7 @@ export function Contact() {
                 </Button>
               </div>
             </form>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>

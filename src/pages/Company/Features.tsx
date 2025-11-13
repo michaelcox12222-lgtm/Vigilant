@@ -13,6 +13,7 @@ import safetyTrackingImage from "../../assets/safety-tracking.png";
 import secureCommsImage from "../../assets/secure-comms.png";
 import aiImage from "../../assets/ai-travel-safety-companion.png";
 import academyImage from "../../assets/academy.png";
+import { motion } from "framer-motion";
 
 const features = [
   {
@@ -62,8 +63,18 @@ export function Features() {
     <div className="min-h-screen text-white">
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto text-center">
-          <div className="flex items-center justify-center gap-2 mb-6">
+        <motion.div 
+          className="max-w-5xl mx-auto text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <motion.div 
+            className="flex items-center justify-center gap-2 mb-6"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+          >
             <Sparkles className="w-8 h-8 text-brand-primary" />
             <h1
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.15]"
@@ -76,20 +87,23 @@ export function Features() {
               App Features
             </h1>
             <Sparkles className="w-8 h-8 text-brand-primary" />
-          </div>
-          <p
+          </motion.div>
+          <motion.p
             className="text-lg sm:text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed"
             style={{
               fontWeight: 400,
               letterSpacing: "-0.01em",
             }}
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
           >
             Replace slow, command-center-dependent models with instant,
             behavior-aware intelligence. Vigilant combines Academy training,
             Intel alerts, Secure Comms, Safety Tracking, and an AI travel/safety
             companion in one enterprise-ready platform.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
       </section>
 
       {/* Features Sections */}
@@ -98,14 +112,24 @@ export function Features() {
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
-              <div
+              <motion.div
                 key={index}
                 className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
                   feature.reverse ? "lg:grid-flow-dense" : ""
                 }`}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.7, delay: index * 0.15, ease: "easeOut" }}
               >
                 {/* Image */}
-                <div className={feature.reverse ? "lg:col-start-2" : ""}>
+                <motion.div 
+                  className={feature.reverse ? "lg:col-start-2" : ""}
+                  initial={{ opacity: 0, x: feature.reverse ? 30 : -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.7, delay: index * 0.15 + 0.1, ease: "easeOut" }}
+                >
                   <div className="relative group">
                     <div className="absolute -inset-1 bg-gradient-to-r from-brand-primary/50 to-brand-primary/20 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity" />
                     <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 bg-black/50">
@@ -116,13 +140,17 @@ export function Features() {
                       />
                     </div>
                   </div>
-                </div>
+                </motion.div>
 
                 {/* Content */}
-                <div
+                <motion.div
                   className={
                     feature.reverse ? "lg:col-start-1 lg:row-start-1" : ""
                   }
+                  initial={{ opacity: 0, x: feature.reverse ? -30 : 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.7, delay: index * 0.15 + 0.2, ease: "easeOut" }}
                 >
                   <div className="bg-white/[0.05] backdrop-blur-[60px] border border-white/20 rounded-2xl p-8 md:p-10 shadow-[0_20px_60px_0_rgba(0,0,0,0.5)] hover:bg-white/[0.08] hover:border-brand-primary/40 hover:shadow-[0_30px_80px_rgba(26,157,143,0.5)] transition-all">
                     <div className="flex items-center gap-4 mb-6">
@@ -140,8 +168,8 @@ export function Features() {
                       {feature.description}
                     </p>
                   </div>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
             );
           })}
         </div>
@@ -149,7 +177,13 @@ export function Features() {
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+        <motion.div 
+          className="max-w-4xl mx-auto text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+        >
           <div className="bg-gradient-to-r from-brand-primary/10 to-brand-primary/5 backdrop-blur-3xl border border-brand-primary/30 rounded-2xl p-12 md:p-16 shadow-[0_8px_32px_0_rgba(26,157,143,0.3)]">
             <h2
               className="text-3xl sm:text-4xl md:text-5xl mb-6"
@@ -177,7 +211,7 @@ export function Features() {
               Book a Demo
             </Button>
           </div>
-        </div>
+        </motion.div>
       </section>
     </div>
   );
