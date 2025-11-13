@@ -225,7 +225,7 @@ export function Hero({ onNavigate }: { onNavigate?: (page: string) => void }) {
               animation: "gradient-sweep 10s ease-in-out forwards",
             }}
           >
-            The All-in-One Safety Platform for Today's Organizations.
+            Simplified Safety for Everyone
           </span>
         </h1>
 
@@ -237,8 +237,7 @@ export function Hero({ onNavigate }: { onNavigate?: (page: string) => void }) {
             letterSpacing: "-0.01em",
           }}
         >
-          Developed by former FBI, military, and intelligence professionals to bring
-          government-grade safety directly to your organization.
+          Built by former FBI, military, and intelligence experts, Vigilant helps you and your loved ones stay aware, connected, and safe, anytime, anywhere.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
