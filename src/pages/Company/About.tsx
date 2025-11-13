@@ -1,32 +1,36 @@
 import { Button } from "../../components/ui/button";
-import { Shield, AlertTriangle, User } from "lucide-react";
+import { Shield, AlertTriangle } from "lucide-react";
 import { motion } from "framer-motion";
+
+import elliePikula from "../../assets/person/ellie-pikula.jpg";
+import nathanKlonoski from "../../assets/person/nathan-klonoski.jpg";
+import bettFox from "../../assets/person/bett-fox.jpg";
+import chrisFox from "../../assets/person/christopher-fox.jpg";
 
 const founders = [
   {
     name: "Ellie Pikula",
     role: "CEO",
+    image: elliePikula,
   },
   {
     name: "Nathan Klonoski",
     role: "CTO",
+    image: nathanKlonoski,
   },
   {
     name: "Betty Fox",
     role: "CMO",
+    image: bettFox,
   },
 ];
-// import elliePikula from "../../assets/ellie-pikula.png";
-// import nathanKlonoski from "../../assets/nathan-klonoski.png";
-// import bettyFox from "../../assets/betty-fox.png";
-// import chrisFox from "../../assets/chris-fox.png";
 
 export function About() {
   return (
     <div className="min-h-screen text-white">
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <motion.div 
+        <motion.div
           className="max-w-5xl mx-auto text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -98,7 +102,7 @@ export function About() {
           </motion.h2>
 
           {/* Our Background */}
-          <motion.div 
+          <motion.div
             className="bg-white/[0.03] backdrop-blur-3xl border border-white/10 rounded-2xl p-8 md:p-12 mb-8 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -139,7 +143,7 @@ export function About() {
           </motion.div>
 
           {/* Closing the Gap */}
-          <motion.div 
+          <motion.div
             className="bg-white/[0.03] backdrop-blur-3xl border border-white/10 rounded-2xl p-8 md:p-12 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -190,7 +194,7 @@ export function About() {
           >
             Leadership
           </motion.h2>
-          <motion.p 
+          <motion.p
             className="text-lg text-gray-400 text-center max-w-4xl mx-auto mb-16 leading-relaxed"
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -213,10 +217,18 @@ export function About() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.6, delay: 0.2 + index * 0.1, ease: "easeOut" }}
+                transition={{
+                  duration: 0.6,
+                  delay: 0.2 + index * 0.1,
+                  ease: "easeOut",
+                }}
               >
                 <div className="aspect-square rounded-xl overflow-hidden mb-6 bg-gradient-to-br from-brand-primary/10 to-black/50 border border-white/10">
-                  <User className="w-24 h-24 text-brand-primary/40" />
+                  <img
+                    src={founder.image}
+                    alt={founder.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h3 className="text-xl mb-1" style={{ fontWeight: 500 }}>
                   {founder.name}
@@ -227,7 +239,7 @@ export function About() {
           </div>
 
           {/* Founder Emeritus */}
-          <motion.div 
+          <motion.div
             className="bg-white/[0.03] backdrop-blur-3xl border border-brand-primary/20 rounded-2xl p-8 md:p-12 shadow-[0_8px_32px_0_rgba(26,157,143,0.2)]"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -238,12 +250,11 @@ export function About() {
               {/* Chris Fox Image */}
               <div className="w-48 h-48 flex-shrink-0">
                 <div className="aspect-square rounded-xl overflow-hidden bg-gradient-to-br from-brand-primary/10 to-black/50 border border-brand-primary/30">
-                  {/* <img
+                  <img
                     src={chrisFox}
-                    alt="Chris Fox"
+                    alt="Christopher Fox"
                     className="w-full h-full object-cover"
-                  /> */}
-                  <User className="w-24 h-24 text-brand-primary/40" />
+                  />
                 </div>
               </div>
 
