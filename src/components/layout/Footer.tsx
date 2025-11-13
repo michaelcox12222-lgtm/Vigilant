@@ -1,4 +1,4 @@
-import vigilantLogo from "../../assets/logo.png";
+import vigilantLogo from "../../assets/viglant.png";
 
 const companyLinks = [
   { label: "App Features", href: "features" },

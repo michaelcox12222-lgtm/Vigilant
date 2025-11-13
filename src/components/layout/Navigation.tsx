@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "../ui/button";
 import { ROUTES } from "../../lib/constants";
 import { env } from "../../lib/env";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/viglant.png";
 
 export function Navigation({
   onNavigate,
@@ -74,7 +74,7 @@ export function Navigation({
               className="bg-brand-primary hover:bg-brand-primary-hover text-white px-5 py-2.5 shadow-md shadow-brand-primary/30"
               style={{ fontWeight: 500 }}
             >
-              Watch a Demo
+              Watch Demo
             </Button>
           </div>
 
@@ -119,7 +119,7 @@ export function Navigation({
                 className="w-full border-white/20 text-white hover:bg-white/10"
                 style={{ fontWeight: 500 }}
               >
-                Watch a Demo
+                Watch Demo
               </Button>
             </div>
           </div>

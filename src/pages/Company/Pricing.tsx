@@ -39,7 +39,7 @@ const plans = [
       "Priority support",
       "Up to 500 users",
     ],
-    cta: "Watch a Demo",
+    cta: "Watch Demo",
     ctaAction: "demo",
     popular: true,
   },

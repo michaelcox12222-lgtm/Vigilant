@@ -60,7 +60,7 @@ export function About() {
               )
             }
           >
-            Watch a Demo
+            Watch Demo
           </Button>
         </div>
       </section>

@@ -6,15 +6,15 @@ import { ProofSection } from "./ProofSection";
 import { CTABand } from "./CTABand";
 import { FAQSection } from "./FAQSection";
 
-export function Home({ onNavigate }: { onNavigate?: (page: string) => void }) {
+export function Home() {
   return (
     <>
-      <Hero onNavigate={onNavigate} />
+      <Hero />
       <ProblemsSection />
       <HowItWorksSection />
       <BenefitsSection />
       <ProofSection />
-      <CTABand onNavigate={onNavigate} />
+      <CTABand />
       <FAQSection />
     </>
   );
