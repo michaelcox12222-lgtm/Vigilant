@@ -218,7 +218,7 @@ export function Beta() {
             <div className="flex items-start space-x-2">
               <Checkbox
                 id="agreement"
-                className="mt-1 border-brand-primary data-[state=checked]:bg-brand-primary"
+                className="mt-1 border-brand-primary bg-transparent data-[state=checked]:bg-brand-primary data-[state=checked]:border-brand-primary data-[state=checked]:text-white data-[state=checked]:shadow-md"
               />
               <Label
                 htmlFor="agreement"
